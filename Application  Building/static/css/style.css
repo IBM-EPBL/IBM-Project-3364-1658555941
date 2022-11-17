@@ -1,0 +1,178 @@
+:root {
+  --clr-primary: #333d51;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  background-color: var(--clr-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2em 3em;
+  color: #fff;
+}
+
+.navigation .nav-lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation .nav-items {
+  padding-left: 2em;
+}
+
+.navigation .nav-items a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: auto;
+}
+
+main {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  padding: 1em 2em;
+}
+
+main h1 {
+  margin-bottom: 1em;
+  border-bottom: 2px solid rgb(236, 225, 66);
+}
+
+main p {
+  font-size: 1.175rem;
+}
+
+.social-icons {
+  font-size: 2rem;
+  color: #fff;
+  padding-left: 0.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  margin-top: 3em;
+  padding: 2em;
+  border: 2px solid var(--clr-primary);
+  border-radius: 1rem;
+}
+
+.login-icon {
+  font-size: 10rem;
+  margin: 0 auto;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control input {
+  margin-bottom: 1.5em;
+  font-size: 1.175rem;
+  outline: none;
+}
+
+.form-control input:last-child {
+  margin-bottom: 0;
+  color: #fff;
+  padding: 0.5em 1em;
+  background-color: #333d51;
+  border: none;
+  border-radius: 100vmax;
+  cursor: pointer;
+}
